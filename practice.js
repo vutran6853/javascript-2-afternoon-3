@@ -130,15 +130,17 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 
-function uniq(array, callback5) {
-  let sortArray = names.slice().sort();
-  let newArray = []; 
-  for(let i = 0; i < sortArray.length -1; i++) {
-    if(sortArray[i + 1] == sortArray[i]) {
-      newArray.push(sortArray[i]);
+function uniq(array, callback6) {
+  let duplicate = [];
+  for(let i = 0; i < array.length; i++) {
+    if(duplicate.includes(array[i])) {
+      false;
     }
+    else {
+      duplicate.push(array[i]);
+    }
+    callback6(duplicate);
   }
-  console.log(newArray);
 }
 
 // Do not edit the code below.
